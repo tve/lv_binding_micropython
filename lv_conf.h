@@ -282,14 +282,14 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
  *================*/
 #define LV_THEME_LIVE_UPDATE    0   /*1: Allow theme switching at run time. Uses 8..10 kB of RAM*/
 
-#define LV_USE_THEME_TEMPL      1   /*Just for test*/
+#define LV_USE_THEME_TEMPL      0   /*Just for test*/
 #define LV_USE_THEME_DEFAULT    1   /*Built mainly from the built-in styles. Consumes very few RAM*/
-#define LV_USE_THEME_ALIEN      1   /*Dark futuristic theme*/
-#define LV_USE_THEME_NIGHT      1   /*Dark elegant theme*/
-#define LV_USE_THEME_MONO       1   /*Mono color theme for monochrome displays*/
-#define LV_USE_THEME_MATERIAL   1   /*Flat theme with bold colors and light shadows*/
-#define LV_USE_THEME_ZEN        1   /*Peaceful, mainly light theme */
-#define LV_USE_THEME_NEMO       1   /*Water-like theme based on the movie "Finding Nemo"*/
+#define LV_USE_THEME_ALIEN      0   /*Dark futuristic theme*/
+#define LV_USE_THEME_NIGHT      0   /*Dark elegant theme*/
+#define LV_USE_THEME_MONO       0   /*Mono color theme for monochrome displays*/
+#define LV_USE_THEME_MATERIAL   0   /*Flat theme with bold colors and light shadows*/
+#define LV_USE_THEME_ZEN        0   /*Peaceful, mainly light theme */
+#define LV_USE_THEME_NEMO       0   /*Water-like theme based on the movie "Finding Nemo"*/
 
 /*==================
  *    FONT USAGE
@@ -320,7 +320,7 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
 #endif // LV_FONT_ROBOTO_28
 
 /* Demonstrate special features */
-#define LV_FONT_ROBOTO_12_SUBPX 1
+#define LV_FONT_ROBOTO_12_SUBPX 0
 #define LV_FONT_ROBOTO_28_COMPRESSED 1  /*bpp = 3*/
 
 /*Pixel perfect monospace font
@@ -389,7 +389,7 @@ typedef void * lv_font_user_data_t;
  * Allows mixing Left-to-Right and Right-to-Left texts.
  * The direction will be processed according to the Unicode Bidirectioanl Algorithm:
  * https://www.w3.org/International/articles/inline-bidi-markup/uba-basics*/
-#define LV_USE_BIDI     1
+#define LV_USE_BIDI     0
 #if LV_USE_BIDI
 /* Set the default direction. Supported values:
  * `LV_BIDI_DIR_LTR` Left-to-Right
@@ -465,7 +465,7 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_CONT     1
 
 /*Color picker (dependencies: -*/
-#define LV_USE_CPICKER   1
+#define LV_USE_CPICKER   0
 
 /*Drop down list (dependencies: lv_page, lv_label, lv_symbol_def.h)*/
 #define LV_USE_DDLIST    1
@@ -580,14 +580,14 @@ typedef void * lv_obj_user_data_t;
 #endif
 
 /*Tileview (dependencies: lv_page) */
-#define LV_USE_TILEVIEW     1
+#define LV_USE_TILEVIEW     0
 #if LV_USE_TILEVIEW
 /*Time of slide animation [ms] (0: no animation)*/
 #  define LV_TILEVIEW_DEF_ANIM_TIME   300
 #endif
 
 /*Window (dependencies: lv_cont, lv_btn, lv_label, lv_img, lv_page)*/
-#define LV_USE_WIN      1
+#define LV_USE_WIN      0
 
 /*==================
  * Non-user section
