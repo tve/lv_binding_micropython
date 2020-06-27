@@ -164,7 +164,7 @@ class ili9341:
             "mode": 0,                              # SPI mode 0
             "spics_io_num": self.cs,                # CS pin
             "queue_size": 2,
-            "flags": esp.SPI_DEVICE.HALFDUPLEX,
+            #"flags": esp.SPI_DEVICE.HALFDUPLEX,
             "duty_cycle_pos": 128,
 	})
 
@@ -295,6 +295,7 @@ class ili9341:
         self.trans.length = len(data) * 8   # Length is in bytes, transaction length is in bits. 
         self.trans.tx_buffer = data         # data should be allocated as DMA-able memory
         self.trans.user = self.spi_callbacks
+        #esp.spi_device_transmit(self.spi, self.trans)
         esp.spi_device_queue_trans(self.spi, self.trans, -1)
     
     ######################################################
